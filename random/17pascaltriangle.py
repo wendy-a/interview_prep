@@ -1,7 +1,7 @@
 from typing import List
 
 
-# leetcode 2221
+# random 2221
 def triangularSum(nums: List[int]) -> int:
     for i in range(len(nums) - 1):
         for j in range(len(nums) - i - 1):

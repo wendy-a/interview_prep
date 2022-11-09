@@ -1,7 +1,7 @@
 from typing import List
 
 
-# leetcode 2221
+# random 2221
 def distinctsubarraykodd(nums: List[int], k: int) -> int:
     counter = 0
     odd_counter = 0

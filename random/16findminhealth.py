@@ -1,7 +1,7 @@
 from typing import List
 
 
-# leetcode 2214
+# random 2214
 def minimumHealth(damage: List[int], armor: int) -> int:
     return 1 + sum(damage) - min(max(damage), armor)
 
