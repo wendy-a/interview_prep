@@ -23,11 +23,13 @@ def get_wk():
     jd_stock = np.loadtxt('JD.csv', delimiter=',', dtype=stock)
 
     record = collections.defaultdict(list)
+    # fetch the dict: (year, week number): [(close_price1, volume1),(close_price2, volume2)....]
     for stock_day in jd_stock:
         date = datetime.datetime.strptime(stock_day['time'], "%m/%d/%Y")
         year = int(date.strftime('%Y'))
         week = int(date.strftime('%U'))
         record[(year, week)].append((stock_day['close_price'], stock_day['volume']))
+    # get the (year, week): average
     return {k: calculate(v) for k, v in record.items()}
 
 
