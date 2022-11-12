@@ -1,3 +1,6 @@
+from typing import List
+
+
 class Solution:
     def getModifiedArray(self, length: int, updates: List[List[int]]) -> List[int]:
         # convert arr to diff arr. it is the same as diff of 0 and 0 is 0
